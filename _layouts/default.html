@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header id="header">
+        {% include header.html %}
+      </header>
+
+      <main id="main" class="{% if page.title %}page-{{ page.title | replace: " ", "-" }}{% endif %}">
+        {{ content }}
+      </main>
+
+      <footer id="footer">
+        {% include footer.html %}
+      </footer>
+    </div><!-- end #wrap -->
+  </body>
+</html>
