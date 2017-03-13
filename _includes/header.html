@@ -1,0 +1,31 @@
+<div class="top text-center hidden-xs">
+  <p class="small text-uppercase">
+    <a class="small" href="#">CUNY Brooklyn College</a>
+  </p>
+</div>
+
+<div class="container">
+  <ul class="list-inline list-unstyled text-right">
+    <div class="identity pull-left list-unstyled list-inline">
+      <li class="brand">
+        <img src="{{ site.url }}/assets/images/brand.png" alt="..."/>
+      </li>
+      <li class="logo">
+        <img src="{{ site.url }}/assets/images/logo.png" alt="..."/>
+        <p class="small text-left">
+          Blacks & Latinxs In C.S
+        </p>
+      </li>
+    </div>
+
+    <div class="navigation list-inline hidden-xs text-uppercase">
+      {% for link in site.data.en.navigation.links %}
+      <li>
+        <a class="link {% if page.url == link[1] %}active{% endif %}" href="{{ link[1] }}">
+          {{ link[0] }}
+        </a>
+      </li>
+      {% endfor %}
+    </div>
+  </ul>
+</div>

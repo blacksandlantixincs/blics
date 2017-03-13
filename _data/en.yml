@@ -1,0 +1,7 @@
+navigation:
+  links:
+    home: "/"
+    about: "/about.html"
+    programs: "/programs.html"
+    resources: "/resources.html"
+    calendar: "/calendar.html"

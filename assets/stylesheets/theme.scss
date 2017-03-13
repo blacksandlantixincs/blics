@@ -2,3 +2,8 @@
 ---
 @import "pages";
 @charset "utf-8";
+
+
+a, a:link, a:active, a:visited { text-decoration: none; }
+a:link { color: $theme-link-color; }
+a:hover { color: $theme-link-hover-color; }

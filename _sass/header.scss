@@ -1,1 +1,73 @@
 @import "helpers";
+
+#header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: $header-background-color;
+
+  .container {
+    padding: 0;
+    max-width: $screen-lg;
+    background: rgba(0,0,0,.3);
+
+    ul {
+      margin: 0;
+      overflow: auto;
+    }
+    ul li {
+    }
+
+    .brand {
+      padding: 0;
+      img { height: $header-height-dk; }
+    }
+    .logo {
+      vertical-align: top;
+      img { height: $header-height-dk - 20px; }
+      p { color: white; margin: 4px 0 0;  }
+    }
+
+    // Navigation ------------------------------
+    .navigation {
+      li {
+        line-height: $header-height-dk;
+        margin-left: 10px;
+        margin-right: 10px;
+        &:nth-child(1n) {
+          .active:before { width: 100%; background: $peach; }
+          .link:hover, .active { color: $peach; &:before { background: $peach; } }
+        }
+        &:nth-child(2n) {
+          .active:before { width: 100%; background: $aqua; }
+          .link:hover, .active { color: $aqua; &:before { background: $aqua; } }
+        }
+        &:nth-child(3n) {
+          .active:before { width: 100%; background: $coral; }
+          .link:hover, .active { color: $coral; &:before { background: $coral; } }
+        }
+        &:nth-child(4n) {
+          .active:before { width: 100%; background: $navy; }
+          .link:hover, .active { color: $navy; &:before { background: $navy; } }
+        }
+      }
+      .link {
+        color: $header-font-color;
+        position: relative;
+        padding-bottom: 10px;
+        @include transition(color $fast);
+        &:before {
+          content: "";
+          left: 0;
+          bottom: 0;
+          width: 3px;
+          height: 3px;
+          position: absolute;
+          background: $header-font-color;
+          @include transition(background, width $fast);
+        }
+        &:hover:before { width: 100%; }
+      }
+    }
+  }
+}
