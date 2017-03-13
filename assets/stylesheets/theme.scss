@@ -7,3 +7,30 @@
 a, a:link, a:active, a:visited { text-decoration: none; }
 a:link { color: $theme-link-color; }
 a:hover { color: $theme-link-hover-color; }
+
+main {
+  margin-top: 90px;
+  @include screen-md-up { margin-top: 116px; }
+  // @include screen-lg-up { margin-top: 116px; }
+}
+
+.page-home {
+  #header {
+    background: transparent;
+    padding-right: $gutter;
+    padding-left: $gutter;
+    .container {
+      background: rgba(0,0,0,.2);
+    }
+    .logo {
+      p { color: white;  }
+    }
+    .link {
+      color: white;
+      &:before { background: white; }
+    }
+  }
+  #main {
+    margin-top: 0 !important;
+  }
+}

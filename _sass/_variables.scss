@@ -28,13 +28,13 @@ $theme-link-color: $aqua;
 $theme-line-height: normal;
 $theme-letter-spacing: 1px;
 $theme-font-weight: normal;
-$theme-font-color: $asphalt;
+$theme-font-color: $midnight-blue;
 $theme-link-hover-color: $theme-link-color;
 $theme-background-color: white;
 $theme-font-family: "Soleil", sans-serif;
 
 
-$header-background-color: transparent;
+$header-background-color: white;
 $header-height-dk: 60px;
 $header-height-mb: 40px;
-$header-font-color: white;
+$header-font-color: $theme-font-color;

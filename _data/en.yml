@@ -5,3 +5,7 @@ navigation:
     programs: "/programs.html"
     resources: "/resources.html"
     calendar: "/calendar.html"
+
+pages:
+  about:
+    title: "About"

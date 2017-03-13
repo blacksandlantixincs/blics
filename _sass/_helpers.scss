@@ -1,1 +1,9 @@
 @import "mixins";
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  &.container-md { max-width: $screen-md; }
+  &.container-lg { max-width: $screen-lg; }
+  &.container-xl { max-width: $screen-xl; }
+}
