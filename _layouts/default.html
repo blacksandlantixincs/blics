@@ -4,13 +4,13 @@
     {% include head.html %}
   </head>
 
-  <body>
+  <body class="{% if page.title %}page-{{ page.title | replace: " ", "-" }}{% endif %}">
     <div id="wrap">
       <header id="header">
         {% include header.html %}
       </header>
 
-      <main id="main" class="{% if page.title %}page-{{ page.title | replace: " ", "-" }}{% endif %}">
+      <main id="main">
         {{ content }}
       </main>
 
@@ -20,6 +20,7 @@
     </div><!-- end #wrap -->
 
     <script type="text/javascript" src="{{ site.url }}/assets/javascripts/slick.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/javascripts/modernizr-custom.js"></script>
     <script type="text/javascript" src="{{ site.url }}/assets/javascripts/theme.js"></script>
 
   </body>

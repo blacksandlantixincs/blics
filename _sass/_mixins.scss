@@ -17,3 +17,21 @@
   -o-transition: $args;
   transition: $args;
 }
+@mixin gradient-background($value) {
+  background: -webkit-#{$value};
+  background: -moz-#{$value};
+  background: -ms-#{$value};
+  background: -o-#{$value};
+  background: $value;
+}
+@mixin optimize($key, $arg) {
+  -webkit-#{$key}: $arg;
+  -moz-#{$key}: $arg;
+  -ms-#{$key}: $arg;
+  -o-#{$key}: $arg;
+  $key: $arg;
+}
+
+@mixin screen-md-up {
+  @media only screen and (min-width: $screen-md + .001px) { @content; }
+}

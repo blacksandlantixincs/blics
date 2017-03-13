@@ -10,14 +10,14 @@
     padding: 0;
     max-width: $screen-lg;
     background: rgba(0,0,0,.3);
+    @include screen-md-up { padding: $gutter; }
 
     ul {
       margin: 0;
       overflow: auto;
     }
-    ul li {
-    }
 
+    // BRAND & LOGO ----------------------------
     .brand {
       padding: 0;
       img { height: $header-height-dk; }
